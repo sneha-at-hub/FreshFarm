@@ -42,6 +42,14 @@ const db = mysql.createPool({
 });
 
 
+// Get a connection from the pool
+db.getConnection((err, connection) => {
+  if (err) {
+    console.error('Error connecting to MySQL database:', err);
+    return;
+  }
+  console.log('Connected to MySQL database');
+
   // Use the connection for querying
   connection.query('SELECT 1 + 1 AS solution', (error, results, fields) => {
     // Release the connection when done with querying
@@ -332,16 +340,6 @@ app.get('/api/totaldata', (req, res) => {
 
 
 
-// Handle database connection errors
-db.getConnection((err, connection) => {
-    if (err) {
-        console.error('Error connecting to MySQL database:', err);
-        process.exit(1); // Exit the process if database connection fails
-    } else {
-        console.log('Connected to MySQL database');
-        connection.release();
-    }
-});
 
 // JWT secret key
 const JWT_SECRET = 'your_secret_key';
