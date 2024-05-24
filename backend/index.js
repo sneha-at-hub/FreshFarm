@@ -26,14 +26,11 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
-const db = mysql.createPool({
-  connectionLimit: 10,
-  host: "monorail.proxy.rlwy.net",
-  user: "root",
-  password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
-  port: 20997,
-  database: "railway"
-});
+// Connection URL
+const dbUrl = "mysql://root:BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK@mysql.railway.internal:3306/railway";
+
+// Create a MySQL connection pool using the URL
+const db = mysql.createPool(dbUrl);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
