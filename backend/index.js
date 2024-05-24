@@ -7,7 +7,7 @@ import path from 'path';
 
 
 
-
+require('dotenv').config();
 
 const app = express();
 
