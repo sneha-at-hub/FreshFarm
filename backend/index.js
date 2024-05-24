@@ -4,10 +4,9 @@ import cors from 'cors';
 import multer from 'multer'; 
 import jwt from 'jsonwebtoken';
 import path from 'path';
+import dotenv from 'dotenv';
+dotenv.config();
 
-
-
-require('dotenv').config();
 
 const app = express();
 
