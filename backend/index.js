@@ -41,13 +41,6 @@ const db = mysql.createPool({
   }
 });
 
-// Get a connection from the pool
-db.getConnection((err, connection) => {
-  if (err) {
-    console.error('Error connecting to MySQL database:', err);
-    return;
-  }
-  console.log('Connected to MySQL database');
 
   // Use the connection for querying
   connection.query('SELECT 1 + 1 AS solution', (error, results, fields) => {
