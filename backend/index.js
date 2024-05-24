@@ -18,6 +18,8 @@ app.use(express.static('uploads'));
 const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQL_DATABASE}`;
 
 const db = mysql.createConnection(urlDB);
+
+
 // const db = mysql.createPool({
 //     connectionLimit: 10,
 //     host: "localhost",
@@ -302,16 +304,6 @@ app.get('/api/totaldata', (req, res) => {
 });
 
 
-
-// Connect to the database
-db.connect((err) => {
-    if (err) {
-        console.error('Error connecting to MySQL database:', err);
-        process.exit(1); // Exit the process if database connection fails
-    } else {
-        console.log('Connected to MySQL database');
-    }
-});
 
 // JWT secret key
 const JWT_SECRET = 'your_secret_key';
