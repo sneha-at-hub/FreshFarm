@@ -17,7 +17,7 @@ app.use(express.static('uploads'));
 
 const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQL_DATABASE}`;
 
-
+const db = mysql.createConnection(urlDB);
 // const db = mysql.createPool({
 //     connectionLimit: 10,
 //     host: "localhost",
@@ -26,7 +26,7 @@ const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${p
 //     database: "Signup"
 // });
 
-const db = mysql.createConnection(urlDB);
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -303,14 +303,13 @@ app.get('/api/totaldata', (req, res) => {
 
 
 
-// Handle database connection errors
-db.getConnection((err, connection) => {
+// Connect to the database
+db.connect((err) => {
     if (err) {
         console.error('Error connecting to MySQL database:', err);
         process.exit(1); // Exit the process if database connection fails
     } else {
         console.log('Connected to MySQL database');
-        connection.release();
     }
 });
 
