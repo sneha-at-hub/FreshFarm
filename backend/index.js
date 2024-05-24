@@ -16,11 +16,11 @@ app.use(express.json());
 app.use(express.static('uploads'));
 
 const db = mysql.createConnection({
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  port: process.env.MYSQLPORT,
-  database: process.env.MYSQL_DATABASE
+  host: 'monorail.proxy.rlwy.net',
+  user: 'root',
+  password: 'BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK',
+  port: 20997,
+  database: 'railway'
 });
 
 
