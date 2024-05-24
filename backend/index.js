@@ -4,7 +4,7 @@ import cors from 'cors';
 import multer from 'multer'; 
 import jwt from 'jsonwebtoken';
 import path from 'path';
-import bcrypt from 'bcrypt';
+
 
 
 
@@ -26,14 +26,16 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
-const db = mysql.createPool({
-  connectionLimit: 10,
-  host: "monorail.proxy.rlwy.net",
+const dbConfig = {
+  host: "localhost", // Replace with your MySQL server's IP address
   user: "root",
   password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
-  port: 20997,
-  database: "railway"
-});
+  port: 3306,
+  database: "Signup"
+};
+
+// Create a MySQL connection pool
+const db = mysql.createPool(dbConfig);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
