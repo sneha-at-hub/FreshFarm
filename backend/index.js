@@ -15,9 +15,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('uploads'));
 
-const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQL_DATABASE}`;
-
-const db = mysql.createConnection(urlDB);
+const db = mysql.createConnection({
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  port: process.env.MYSQLPORT,
+  database: process.env.MYSQL_DATABASE
+});
 
 
 // const db = mysql.createPool({
