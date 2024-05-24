@@ -4,7 +4,6 @@ import cors from 'cors';
 import multer from 'multer'; 
 import jwt from 'jsonwebtoken';
 import path from 'path';
-import bcrypt from 'bcrypt';
 
 
 
