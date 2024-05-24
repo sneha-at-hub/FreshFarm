@@ -26,16 +26,15 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
-const dbConfig = {
-  host: "localhost", // Replace with your MySQL server's IP address
-  user: "root",
-  password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
-  port: 3306,
-  database: "Signup"
-};
+const db = mysql.createPool({
+  connectionLimit: 10,
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  port: process.env.MYSQLPORT,
+  database: process.env.MYSQL_DATABASE
+});
 
-// Create a MySQL connection pool
-const db = mysql.createPool(dbConfig);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
