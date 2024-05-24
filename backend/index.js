@@ -26,11 +26,16 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
-// Connection URL
-const dbUrl = "mysql://root:BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK@mysql.railway.internal:3306/railway";
+const dbConfig = {
+  host: "localhost", // Replace with your MySQL server's IP address
+  user: "root",
+  password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
+  port: 3306,
+  database: "Signup"
+};
 
-// Create a MySQL connection pool using the URL
-const db = mysql.createPool(dbUrl);
+// Create a MySQL connection pool
+const db = mysql.createPool(dbConfig);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
