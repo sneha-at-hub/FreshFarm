@@ -83,7 +83,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    axios.get('https://freshfarm-2358894.up.railway.appapi/admintotaldata')
+    axios.get('https://freshfarm-2358894.up.railway.app/api/admintotaldata')
       .then(response => {
         console.log('Fetched admin total data:', response.data);
         setData({

@@ -54,7 +54,7 @@ const EditProductDialog = ({ product, onSave, onClose }) => {
           formData.append('image', editedProduct.image);
         }
 
-        const response = await axios.put(`https://freshfarm-2358894.up.railway.appapi/products/${editedProduct.id}`, formData, {
+        const response = await axios.put(`https://freshfarm-2358894.up.railway.app/api/products/${editedProduct.id}`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

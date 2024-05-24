@@ -16,7 +16,7 @@ const FarmerManagement = () => {
   useEffect(() => {
     const fetchFarmers = async () => {
       try {
-        const response = await axios.get('https://freshfarm-2358894.up.railway.appfarmers');
+        const response = await axios.get('https://freshfarm-2358894.up.railway.app/farmers');
         setFarmers(response.data);
       } catch (error) {
         console.error('Error fetching farmers:', error);
@@ -53,7 +53,7 @@ const FarmerManagement = () => {
     }
 
     try {
-      await axios.put(`https://freshfarm-2358894.up.railway.appfarmers/${editedFarmer.id}`, editedFarmer);
+      await axios.put(`https://freshfarm-2358894.up.railway.app/farmers/${editedFarmer.id}`, editedFarmer);
       setFarmers(farmers.map(farmer => (farmer.id === editedFarmer.id ? editedFarmer : farmer)));
       setEditedFarmer(null);
       setEditPopupVisible(false);
@@ -76,7 +76,7 @@ const FarmerManagement = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://freshfarm-2358894.up.railway.appfarmers/${deleteFarmerId}`);
+      await axios.delete(`https://freshfarm-2358894.up.railway.app/farmers/${deleteFarmerId}`);
       setFarmers(farmers.filter(farmer => farmer.id !== deleteFarmerId));
       setDeleteMessage('');
       setDeleteFarmerId(null);

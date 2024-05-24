@@ -18,7 +18,7 @@ const AdminManagementInterface = () => {
 
   const fetchAdminsData = async () => {
     try {
-      const response = await axios.get('https://freshfarm-2358894.up.railway.appadmins');
+      const response = await axios.get('https://freshfarm-2358894.up.railway.app/admins');
       setAdmins(response.data);
     } catch (error) {
       console.error('Error fetching admins data:', error);
@@ -36,7 +36,7 @@ const AdminManagementInterface = () => {
 
   const handleSaveEdit = async () => {
     try {
-      await axios.put(`https://freshfarm-2358894.up.railway.appadmins/${editedAdmin.admin_id}`, editedAdmin);
+      await axios.put(`https://freshfarm-2358894.up.railway.app/admins/${editedAdmin.admin_id}`, editedAdmin);
       setEditedAdmin(null);
       fetchAdminsData(); // Refresh admin list after update
     } catch (error) {
@@ -55,7 +55,7 @@ const AdminManagementInterface = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://freshfarm-2358894.up.railway.appadmins/${deleteAdminId}`);
+      await axios.delete(`https://freshfarm-2358894.up.railway.app/admins/${deleteAdminId}`);
       setDeleteMessage('');
       setFadeContainer(false);
       setAdmins(admins.filter((admin) => admin.admin_id !== deleteAdminId)); // Remove admin from frontend

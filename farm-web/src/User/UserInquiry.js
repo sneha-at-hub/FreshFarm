@@ -41,7 +41,7 @@ const UserInquiry = ({ productName }) => {
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       try {
-        await axios.post('https://freshfarm-2358894.up.railway.appsubmit-inquiry', form); // Send form data to backend
+        await axios.post('https://freshfarm-2358894.up.railway.app/submit-inquiry', form); // Send form data to backend
         setIsMessageSent(true);
       } catch (error) {
         console.error('Error submitting form:', error);

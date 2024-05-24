@@ -96,7 +96,7 @@ const SignupForm = () => {
     };
 
     try {
-      const response = await fetch('https://freshfarm-2358894.up.railway.appfarmer_signup', {
+      const response = await fetch('https://freshfarm-2358894.up.railway.app/farmer_signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

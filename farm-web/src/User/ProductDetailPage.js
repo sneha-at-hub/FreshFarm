@@ -21,7 +21,7 @@ const ProductDetailPage = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-    axios.get(`https://freshfarm-2358894.up.railway.appapi1/products/${productId}`)
+    axios.get(`https://freshfarm-2358894.up.railway.app/api1/products/${productId}`)
       .then(response => {
         setProduct(response.data);
         setCategory(response.data.category);
@@ -57,7 +57,7 @@ const ProductDetailPage = () => {
   const handleAddToCart = () => {
     const totalPrice = product.price * quantity;
 
-    axios.post('https://freshfarm-2358894.up.railway.appapi11/products/cart', {
+    axios.post('https://freshfarm-2358894.up.railway.app/api11/products/cart', {
       product_name: product.name,
       quantity,
       category: category,
@@ -91,7 +91,7 @@ const ProductDetailPage = () => {
       <Nav />
       <div className="product-container">
         <div className="product-details">
-          <img className="product-image" src={`https://freshfarm-2358894.up.railway.app${product.image}`} alt={product.name} />
+          <img className="product-image" src={`https://freshfarm-2358894.up.railway.app/${product.image}`} alt={product.name} />
           <div className="product-info">
             <h2>{product.name}</h2>
             <p>Price: Rs.{product.price}</p>

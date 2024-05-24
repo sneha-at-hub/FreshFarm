@@ -13,7 +13,7 @@ const AdminOrder = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('https://freshfarm-2358894.up.railway.appapi11/farmer/orders');
+      const response = await axios.get('https://freshfarm-2358894.up.railway.app/api11/farmer/orders');
       setOrders(response.data);
     } catch (error) {
       console.error('Error fetching orders:', error);

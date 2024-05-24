@@ -57,7 +57,7 @@ const AddProductDialog = ({ onSave, onClose }) => {
       formData.append('image', newProduct.image);
 
       // Pass the farmerId as a query parameter in the URL
-      await axios.post(`https://freshfarm-2358894.up.railway.appapi/products1?farmerId=${farmerId}`, formData, {
+      await axios.post(`https://freshfarm-2358894.up.railway.app/api/products1?farmerId=${farmerId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

@@ -10,7 +10,7 @@ const FarmerInquiry = () => {
     // Fetch inquiries from backend
     async function fetchInquiries() {
       try {
-        const response = await axios.get('https://freshfarm-2358894.up.railway.appget-inquiries'); // Replace the URL with your actual backend endpoint
+        const response = await axios.get('https://freshfarm-2358894.up.railway.app/get-inquiries'); // Replace the URL with your actual backend endpoint
         setInquiries(response.data);
       } catch (error) {
         console.error('Error fetching inquiries:', error);

@@ -14,7 +14,7 @@ const FarmerLanding = () => {
   });
 
   useEffect(() => {
-    axios.get('https://freshfarm-2358894.up.railway.appapi/totaldata')
+    axios.get('https://freshfarm-2358894.up.railway.app/api/totaldata')
       .then(response => {
         console.log('Fetched total data:', response.data);
         setData({

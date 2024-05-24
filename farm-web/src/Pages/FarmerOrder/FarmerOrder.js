@@ -13,7 +13,7 @@ const FarmerOrder = () => {
 
   const fetchOrders = () => {
     // Make an API call to fetch orders
-    fetch('https://freshfarm-2358894.up.railway.appapi11/farmer/orders') // Replace the URL with your actual backend endpoint
+    fetch('https://freshfarm-2358894.up.railway.app/api11/farmer/orders') // Replace the URL with your actual backend endpoint
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch orders');
@@ -66,7 +66,7 @@ const FarmerOrder = () => {
     }));
 
     // Send a POST request to update the order status in the backend
-    fetch(`https://freshfarm-2358894.up.railway.appapi11/farmer/orders/${orderId}/status`, {
+    fetch(`https://freshfarm-2358894.up.railway.app/api11/farmer/orders/${orderId}/status`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

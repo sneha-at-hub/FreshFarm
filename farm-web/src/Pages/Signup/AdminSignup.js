@@ -30,7 +30,7 @@ const SignupForm2 = () => {
 
     try {
       // Server request for form submission
-      const response = await fetch(`https://freshfarm-2358894.up.railway.appadminsignup/${adminId}`, { // Pass adminId in the URL
+      const response = await fetch(`https://freshfarm-2358894.up.railway.app/adminsignup/${adminId}`, { // Pass adminId in the URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

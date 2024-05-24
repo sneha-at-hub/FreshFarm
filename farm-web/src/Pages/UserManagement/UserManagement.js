@@ -13,7 +13,7 @@ const UserManagement = () => {
 
   useEffect(() => {
     // Fetch users from backend API when component mounts
-    axios.get('https://freshfarm-2358894.up.railway.appapi/users')
+    axios.get('https://freshfarm-2358894.up.railway.app/api/users')
       .then(response => {
         setUsers(response.data);
       })
@@ -30,7 +30,7 @@ const UserManagement = () => {
   const handleDeleteConfirmation = (confirmed) => {
     if (confirmed) {
       // Delete user from backend API
-      axios.delete(`https://freshfarm-2358894.up.railway.appapi/deleteUser/${userToDelete}`)
+      axios.delete(`https://freshfarm-2358894.up.railway.app/api/deleteUser/${userToDelete}`)
         .then(response => {
           console.log('User deleted successfully:', response.data);
           // Update frontend state after successful deletion

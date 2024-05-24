@@ -16,7 +16,7 @@ const ProductListPage = ({ category }) => {
     // Fetch products from the backend API when the component mounts or when category changes
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://freshfarm-2358894.up.railway.appapi/products');
+        const response = await axios.get('https://freshfarm-2358894.up.railway.app/api/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -242,7 +242,7 @@ const ProductListPage = ({ category }) => {
       {currentProducts.map(product => (
         <Link key={product.id} to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <div style={{ margin: '20px', padding: '20px', height: 'auto', width: '200px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', cursor: 'pointer', transition: 'transform 0.3s', backgroundColor: '#f2f2f2', hover: { transform: 'scale(1.05)' } }}>
-            <img src={`https://freshfarm-2358894.up.railway.app${product.image}`} alt={product.name} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px 8px 8px 8px' }} />
+            <img src={`https://freshfarm-2358894.up.railway.app/${product.image}`} alt={product.name} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px 8px 8px 8px' }} />
             <div style={{ backgroundColor: '#f2f2f2', padding: '10px', borderRadius: '0 0 8px 8px' }}>
               <h3 style={{ fontSize: '14px', marginBottom: '10px', color: '#333', fontWeight: 'bold' }}>{product.name}</h3>
               <p style={{ fontSize: '18px', marginBottom: '10px', color: '#00AC7F' }}>Rs {product.price}</p>

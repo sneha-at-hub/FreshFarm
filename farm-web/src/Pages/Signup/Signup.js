@@ -31,7 +31,7 @@ const RegistrationForm = () => {
   
     try {
       // If email doesn't exist, proceed with registration
-      const signupResponse = await fetch('https://freshfarm-2358894.up.railway.appsignup', {
+      const signupResponse = await fetch('https://freshfarm-2358894.up.railway.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

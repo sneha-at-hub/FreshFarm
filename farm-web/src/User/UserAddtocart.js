@@ -19,7 +19,7 @@ function Cart({ userId }) {
   }, []); // Empty dependency array to run once on mount
 
   const fetchCartItems = () => {
-    fetch('https://freshfarm-2358894.up.railway.appapi11/products/cart', {
+    fetch('https://freshfarm-2358894.up.railway.app/api11/products/cart', {
       params: { user_id: userId }
     })
       .then(response => {
@@ -41,7 +41,7 @@ function Cart({ userId }) {
   };
 
   const handleRemoveFromCart = (productId) => {
-    fetch(`https://freshfarm-2358894.up.railway.appapi11/products/cart/${productId}`, {
+    fetch(`https://freshfarm-2358894.up.railway.app/api11/products/cart/${productId}`, {
       method: 'DELETE',
       params: { user_id: userId }
     })
@@ -65,7 +65,7 @@ function Cart({ userId }) {
     }
 
     // Make a PATCH request to update the quantity and price in the backend
-    fetch(`https://freshfarm-2358894.up.railway.appapi11/products/cart/${productId}`, {
+    fetch(`https://freshfarm-2358894.up.railway.app/api11/products/cart/${productId}`, {
       method: 'PATCH',
       params: { user_id: userId },
       headers: {
@@ -125,7 +125,7 @@ function Cart({ userId }) {
       totalPrice: calculateTotalPrice() // You need to implement this function
     };
 
-    fetch('https://freshfarm-2358894.up.railway.appapi11/products/cart/match', {
+    fetch('https://freshfarm-2358894.up.railway.app/api11/products/cart/match', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ function Cart({ userId }) {
             totalPrice: calculateTotalPrice(),
           };
 
-          fetch('https://freshfarm-2358894.up.railway.appapi11/products/cart/placeOrder', {
+          fetch('https://freshfarm-2358894.up.railway.app/api11/products/cart/placeOrder', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

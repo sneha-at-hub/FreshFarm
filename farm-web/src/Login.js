@@ -18,7 +18,7 @@ const Login = () => {
     }
   
     try {
-      const response = await fetch('https://freshfarm-2358894.up.railway.applogin', {
+      const response = await fetch('https://freshfarm-2358894.up.railway.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
