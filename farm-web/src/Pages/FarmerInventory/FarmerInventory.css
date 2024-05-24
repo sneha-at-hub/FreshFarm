@@ -1,0 +1,288 @@
+.button-group {
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #e0e0e0;
+  padding: 8px 12px;
+  font-size: 12px;
+  border: none;
+  color: rgb(19, 18, 18);
+  border-radius: 12px;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Active color */
+input[type="radio"]:checked + label {
+  background-color: #219C90; /* Active background color */
+  color: white; /* Active text color */
+}
+
+.button:last-child {
+  border-right: none;
+}
+
+.row-container {
+  display: flex;
+  height: 45px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-bar-container {
+  order: -1; /* Push to the start of the flex container */
+}
+
+/* Additional styling for the search bar and filter container if needed */
+
+.button:hover {
+  background-color: rgb(33, 156, 144);
+  color: white;
+}
+
+/* Style for filter container */
+.filter-container {
+  margin-top: 20px;
+  margin-left: 290px;
+}
+
+.filter-container label {
+  margin-right: 10px;
+}
+
+.filter-container select {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Style for search bar container */
+.search-bar-container {
+  margin-top: 20px;
+}
+
+.search-bar {
+  width: 400px;
+  padding: 10px;
+  margin-left: 290px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4CAF50; /* Change border color on focus */
+}
+
+.search-bar::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+.farmer-inventory table {
+  border-collapse: collapse;
+  width: 1120px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-left: 290px;
+  margin-top: 10px;
+}
+
+.farmer-inventory th {
+  background-color: #e2e2e2c0; /* Change the background color to a shade of green */
+  color: rgb(57, 57, 57); /* Set text color to white */
+  padding: 14px 15px; /* Increase padding for better spacing */
+  text-align: left;
+  border-bottom: 2px solid white; /* Add a bottom border for separation */
+}
+
+.farmer-inventory td {
+  padding: 10px 15px; /* Adjust padding for better spacing */
+  border-bottom: 1px solid #ddd;
+}
+
+.farmer-inventory tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Style for edit and delete buttons */
+.farmer-inventory .edit-button {
+  background-color: #5bd257; /* Green color for edit button */
+  color: white;
+  border: none;
+  font-size: 12px;
+  padding: 8px 12px; /* Adjust padding for better button size */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+  margin-right: 8px; /* Add spacing between buttons */
+}
+
+.farmer-inventory .edit-button:hover {
+  background-color: #4cd24f; /* Darken button color on hover */
+}
+
+.farmer-inventory .delete-button {
+  background-color: #d0d2d0; /* Grey color for delete button */
+  color: black; /* Black text color for delete button */
+  border: none;
+  font-size: 12px;
+  padding: 8px 12px; /* Adjust padding for better button size */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.farmer-inventory .delete-button:hover {
+  background-color: #c3c6c3; /* Darken button color on hover */
+}
+
+.edit-modal-container,
+.delete-modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.edit-modal-content,
+.delete-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-modal-content h2,
+.delete-modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.edit-modal-content input[type="number"],
+.delete-modal-content input[type="number"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-modal-content button,
+.delete-modal-content button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.edit-modal-content button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.delete-modal-buttons .delete-confirm {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.delete-modal-buttons .delete-cancel {
+  background-color: #ccc;
+  color: black;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Specific styles for modal content */
+.edit-modal-container .edit-modal-content input[type="number"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-modal-container .edit-modal-content button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-modal-container .edit-modal-content button:hover {
+  background-color: #45a049;
+}
+
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #666;
+}
+
+.edit-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.edit-modal-header close-button{
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #666;
+}

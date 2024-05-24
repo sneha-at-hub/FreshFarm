@@ -1,0 +1,73 @@
+/* Footer Container */
+.footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align flex items horizontally */
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  /* About Us Section, Product Categories, and Connect with Us Section */
+  .about-us-section,
+  .product-categories,
+  .connect-section {
+    flex: 1;
+    margin-bottom: 20px;
+    text-align: center; /* Center align text within each section */
+  }
+  
+  .about-us-section h3,
+  .product-categories h3,
+  .connect-section h3 {
+    color: #333;
+  }
+  
+  .about-us-section p {
+    color: #666;
+  }
+  
+  /* Product Categories */
+  .product-categories ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-categories li {
+    margin-bottom: 10px;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center align social icons horizontally */
+  }
+  
+  .social-icons a {
+    color: #333;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #3b5998; /* Facebook blue */
+  }
+  
+  /* Scanner Icon */
+  .scanner-icon {
+    margin-top: 20px;
+  }
+  
+  .scanner-icon svg {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .scanner-icon svg:hover {
+    color: #007bff; /* Bootstrap blue */
+  }

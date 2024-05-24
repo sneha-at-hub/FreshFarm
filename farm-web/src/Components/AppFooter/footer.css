@@ -1,0 +1,119 @@
+/* Footer Container */
+.footer {
+    background-color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer-container {
+    max-width: 90%; /* Adjust to cover 90% of the width */
+    margin: 30px auto;
+    height:100px;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Sections */
+  .get-support-section,
+  .product-categories,
+  .sell-on-fresh-farms,
+  .trade-assurance-section,
+  .get-to-know-us-section,
+  .connect-section {
+    flex: 1;
+    margin-bottom: 40px; /* Increased margin-bottom for more spacing */
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Headings */
+  .get-support-section h3,
+  .product-categories h3,
+  .sell-on-fresh-farms h3,
+  .trade-assurance-section h3,
+  .get-to-know-us-section h3,
+  .connect-section h3 {
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Links List */
+  .support-links,
+  .sell-links,
+  .trade-assurance-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* List Items */
+  .support-links li,
+  .sell-links li,
+  .trade-assurance-links li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  /* Links */
+  .support-links a,
+  .sell-links a,
+  .trade-assurance-links a {
+    color: #333;
+    font-size: 14px;
+    
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover State for Links */
+  .support-links a:hover,
+  .sell-links a:hover,
+  .trade-assurance-links a:hover {
+    color: #1ad882;
+
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: flex-start; /* Align icons to the left */
+    margin-top: 8px; /* Add margin on top for spacing */
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #3b5998;
+  }
+  
+  /* Adjustments for Products Section */
+  .product-categories {
+    
+    text-align: left; /* Ensure text alignment is left */
+  }
+  
+  .product-categories ul {
+    font-size: 14px;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .product-categories ul li {
+    font-size: 14px;
+    margin-bottom: 8px; /* Adjust spacing between list items */
+    display: block; /* Ensure list items are displayed as block elements */
+  }
+  .footerBoxes{padding: 0 20px 0 5px ;}
+  .footerBoxes .box{background: #F4F6FA; padding: 20px 20px; border-radius: 15px; margin-left: 20px;display: flex;} 
+
+ .footerBoxes .box  img{position: relative; transition: all 0.2s ease-in-out; width: 42px; }
+.footerBoxes .box .info h4{font-size: 16px; font-weight: 600; margin-top:2px; margin-left: 10px}
+ .footerBoxes .box .info p{margin-bottom: 0px; font-size: 14px; opacity: 0.8; margin-left: 10px}
+ .footerBoxes .box:hover img{transform: translateY(-5px);}
+

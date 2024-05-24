@@ -1,0 +1,88 @@
+/* AdminManagementInterface.css */
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4CAF50; /* Change border color on focus */
+}
+
+/* Main content container */
+.admin-management {
+  margin-left: 250px; /* Adjust margin to match sidebar width */
+  padding: 20px;
+
+
+}
+
+/* Heading style */
+.admin-management h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top:10px;
+}
+
+/* Table style */
+.admins-table {
+  width: 100%;
+
+}
+
+.admins-table th,
+.admins-table td {
+  padding: 8px;
+  text-align: left;
+  font-size:14px;
+  border-bottom: 1px solid #ddd; /* Add bottom border to cells */
+}
+
+.admins-table th {
+  background-color: #e2e2e2c0;
+  color:  rgb(57, 57, 57);
+}
+
+
+
+.admins-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Remove border-radius */
+.admins-table th,
+.admins-table td {
+  border-radius: 0;
+}
+
+  /* Add column separator */
+.admins-table th:not(:last-child),
+.admins-table td:not(:last-child) {
+  border-right: 1px solid #ddd; /* Add right border to all cells except the last one */
+}
+
+
+
+ .edit-button {
+  background-color: #4CAF50; 
+
+  color: white;
+  font-size: 12px;
+  padding: 8px 14px; /* Increase button padding */
+  margin-right: 10px; /* Increase margin for better separation */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+.delete-button {
+  background-color: #e2e2e2c0; 
+  font-size: 12px;
+
+  color: rgb(31, 30, 30);
+  font-size: 13px;
+  padding: 8px 14px; /* Increase button padding */
+  margin-right: 10px; /* Increase margin for better separation */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+

@@ -1,0 +1,114 @@
+.product-container {
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+}
+
+.product-table {
+  width: 1140px; /* Reduced width */
+  border-collapse: collapse;
+  margin-top:-60px;
+  margin-left: 210px;
+
+
+}
+.search-input::placeholder {
+  color: #aaa; /* Placeholder text color */
+  font-size: 13px;
+}
+
+.product-table th, .product-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 14px; /* Increase padding for better spacing */
+  text-align: left;
+  font-size: 14px;
+}
+
+.product-table th {
+  background-color:#e2e2e2c0;
+  color: rgb(57, 57, 57);
+}
+
+.product-image1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Make product images round */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.edit-button-pro, .delete-button-pro {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 13px;
+  padding: 8px 14px; /* Increase button padding */
+  margin-right: 10px; /* Increase margin for better separation */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.edit-button:hover, .delete-button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Optional: Add hover effect for table rows */
+.product-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+.add-item-button {
+  background-color: #45a049; /* Blue color */
+  padding: 10px 16px;
+  margin-bottom: 10px; /* Add some space below the button */
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-item-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.product-header-container {
+  margin-bottom: 20px; /* Add some space below the header */
+}
+
+.product-header-container h1 {
+  font-size: 24px; /* Adjust the font size of the heading */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.product-header-container input[type="text"] {
+  padding: 8px 14px; /* Adjust padding for input field */
+  border-radius: 4px; /* Add border radius for input field */
+  border: 1px solid #ccc; /* Add border for input field */
+  font-size: 16px; /* Adjust font size for input field */
+  margin-right: 10px; /* Add some space between input field and button */
+}
+
+.product-header-container button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 8px 16px; /* Adjust padding for button */
+  border: none;
+
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.product-header-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Add column separator */
+.product-container .product-table th:not(:last-child),
+.product-container .product-table td:not(:last-child) {
+border-right: 1px solid #ddd; /* Add right border to all cells except the last one */
+}

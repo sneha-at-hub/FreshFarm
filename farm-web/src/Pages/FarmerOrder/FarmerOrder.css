@@ -1,0 +1,81 @@
+.farmer-order-container {
+   margin-top:100px;
+    width: 90%;
+    margin-left: 200px;
+    max-width: 1000px;
+    margin-left: 400px;
+    font-size: 14px;
+  }
+  ::placeholder {
+    color: #aaa; /* Placeholder text color */
+    
+  }
+  
+  .farmer-order-heading {
+    text-align: center;
+  }
+  
+  .farmer-order-container table {
+    width: 1120px;
+    margin-left: -110px;
+    border-collapse: collapse;
+    margin-top: -88px;
+  
+    
+
+  
+    background-color: #fff; /* White background */
+  }
+  
+  .farmer-order-container th,
+  .farmer-order-container td {
+    padding: 12px 8px 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add border at the bottom of each cell */
+    border-right: 1px solid #ddd; /* Add border at the right of each cell */
+  }
+  
+  .farmer-order-container th:last-child,
+  .farmer-order-container td:last-child {
+    border-right: none; /* Remove right border for the last column */
+  }
+  
+  .farmer-order-container th:first-child,
+  .farmer-order-container td:first-child {
+    border-left: none; /* Remove left border for the first column */
+  }
+  
+  .farmer-order-container th {
+    background-color: #e2e2e2c0;
+    color: rgb(57, 57, 57);
+    font-size: 12px;
+  }
+  
+  .farmer-order-container tbody tr:hover {
+    background-color: #ffffff;
+  }
+  
+  .farmer-order-container .action-buttons {
+    display: flex;
+  
+  }
+  
+  .farmer-order-container button {
+    margin-right: 14px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green color */
+    color: white; /* Text color is white */
+    padding: 8px 12px; /* Adjust padding for button */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .farmer-order-container button.in-progress {
+    width: 170px; /* Adjust the width as needed */
+  }
+  
+  .farmer-order-container button:hover {
+    background-color:  #4CAF50; 
+  }

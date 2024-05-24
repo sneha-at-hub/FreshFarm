@@ -1,0 +1,196 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.product-details {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -50px;
+  margin-left: -290px;
+
+
+}
+
+.product-image {
+  width: 400px;
+  height: 450px;
+  
+  border-radius: 8px;
+  margin-right: 100px;
+}
+
+.product-info {
+  width: 600px;
+  margin-left: -50px;
+  
+}
+
+.product-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: rgb(54, 54, 54);
+}
+
+.product-info p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(69, 178, 107);
+}
+
+.product-info p1 {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  
+}
+
+.product-info p2 {
+  font-size: 15px;
+  color: rgb(118, 114, 114);
+  font-weight: 600;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.quantity-control button {
+  padding: 7px 14px;
+  margin: 0 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgb(211, 211, 211);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.new-button{
+  display: flex;
+justify-content: center;
+margin-right: 190px;
+}
+
+.quantity-control button:hover {
+  background-color: rgb(146, 146, 146);
+  color: rgb(0, 0, 0);
+}
+
+.quantity-control span {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.add-to-cart-button{
+  margin-right:90px;
+  font-size: 21px;
+  margin-top: 25px;
+  color: white;
+  
+  width: 160px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+}
+
+.buy-now-button {
+  font-size: 21px;
+  margin-top: 34px;
+
+  color: white;
+
+  width: 160px;
+
+  text-align: center;
+
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.inquiry-button {
+  position: absolute;
+  margin-left: 1250px; /* Adjust as needed */
+  margin-top: 150px;
+  top: 20px;
+  transition: transform 0.3s;
+}
+
+.inquiry-button:hover {
+  transform: scale(1.1);
+}
+
+.inquiryButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inquiryButton:hover {
+  background-color: #148f57;
+}
+
+
+
+
+
+
+
+.buttonStyle {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  width: 200px;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+}
+
+.buttonStyle:hover {
+  background-color: #148f57; /* Slightly darker shade of green on hover */
+}
+
+.buyNowButton {
+  background-color: grey;
+  border: none;
+  width: 200px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+}
+
+.buyNowButton:hover {
+  background-color: #c4c4c4; /* Slightly darker shade of grey on hover */
+}

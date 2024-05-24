@@ -1,0 +1,114 @@
+.user-inquiry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  color: #333;
+}
+
+.form-container1 {
+  background-color: #f0f0f0; /* Light grey background for the form */
+  padding: 20px 20px; /* Equal padding on all sides */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container1 h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 80%; /* Ensure full width */
+  padding: 10px; /* Consistent padding for both input and textarea */
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is included in the total width/height */
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group .error {
+  color: red;
+  font-size: 0.8em;
+}
+
+
+.go-back-button1 {
+  background-color: #f0f0f0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 20px; /* Adjust as necessary */
+  left: 20px; /* Adjust as necessary */
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease; /* Smooth transition for expanding */
+  width: 40px; /* Initial width to only show the arrow */
+}
+
+.go-back-button1:hover {
+  width: 120px; /* Width when hovered to show text */
+  background-color: #c7c7c7;
+}
+
+.go-back-icon1 {
+  
+  margin-left: 5px;
+  color: black;
+}
+
+.go-back-text1 {
+  opacity: 0;
+  color: black;
+  margin-left: 10px; /* Add gap between the icon and text */
+  transition: opacity 0.3s ease; /* Smooth transition for text opacity */
+}
+
+.go-back-button1:hover .go-back-text1 {
+  opacity: 1; /* Show text when hovered */
+}
+
+
+.user-inquiry button2 {
+  background-color: #068e26;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.user-inquiry button2:hover {
+  background-color: #00b34b;
+}
+
+.thank-you-message {
+  text-align: center;
+}
+
+.thank-you-message h2 {
+  margin-bottom: 10px;
+}

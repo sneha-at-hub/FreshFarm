@@ -1,0 +1,169 @@
+
+
+.search-bar-here::placeholder {
+  color: #aaa;
+}
+
+.search-bar-here:focus {
+  border-color: #4CAF50;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: auto; /* Adjust the height as needed */
+   /* Move the container upwards */
+}
+
+
+.management-interface {
+  color: black; /* Black */
+}
+
+.farmer-management table {
+  width: 1140px; /* Fixed width for the table */
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 10000px; /* Add some margin */
+  background-color: white; /* Change background color to white */
+  border-radius: 8px; /* Add border radius */
+  margin-left: 82px; /* Center the table horizontally */
+  margin-right: -170px; /* Center the table horizontally */
+}
+
+.farmer-management th,
+.farmer-management td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  max-width: 300px; /* Limit the width of each cell */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.farmer-management th {
+  background-color: #e2e2e2c0; /* Green */
+  color:  rgb(57, 57, 57);
+}
+
+.farmer-management input[type="text"] {
+  width: 100%; /* Set input width to 100% */
+  max-width: 200px; /* Limit the maximum width of the input fields */
+}
+
+.farmer-management table {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow only to the table */
+}
+
+.delete-button {
+  color: rgb(255, 0, 0); /* Set text color to red */
+  text-align: center; /* Center align text */
+}
+
+.search-container {
+  text-align: center; /* Center align the content horizontally */
+  margin: 50px auto; /* Center the container vertically and horizontally using margin */
+  padding: 10px; /* Increase padding */
+  margin-top: -250px; /* Adjust margin to position vertically */
+}
+
+/* Add these styles to your CSS file */
+
+/* Edit Popup */
+.edit-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-width: 260px;
+  width: 100%;
+}
+
+.edit-popup h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  margin-left:20px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.buttons {
+  margin-top: 20px;
+
+  margin-left: 20px;
+}
+
+.buttons button {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Delete Dialog */
+.delete-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-width: 300px;
+  width: 100%;
+}
+
+.delete-dialog p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.delete-dialog button {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.delete-dialog button:last-child {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Add column separator */
+.farmer-management th:not(:last-child),
+.farmer-management td:not(:last-child) {
+border-right: 1px solid #ddd; /* Add right border to all cells except the last one */
+}

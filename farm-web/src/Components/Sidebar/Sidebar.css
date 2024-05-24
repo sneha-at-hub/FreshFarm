@@ -1,0 +1,179 @@
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0px;
+  padding-top: 20px;
+  background-color: rgb(255, 255, 255); /* Corrected typo in color name */
+  color: #333;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Corrected shadow */
+  border-right: 1px solid #ddd;
+  border-radius: 10px;
+  overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s, transform 0.2s; /* Include transform in transition */
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  width: 100%; /* Equalize width */
+}
+
+.sidebar ul li:hover {
+  transform: translateX(5px); /* Move item slightly to the right on hover */
+}
+
+.sidebar ul li.active {
+  background-color: #24cd2199;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a svg {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  transition: transform 0.2s; /* Add transform transition for icon */
+}
+
+.sidebar ul li a span {
+  padding-left: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  width: 100%; /* Hover width */
+}
+.logout-button {
+  cursor: pointer;
+  display: flex; /* flexbox */
+  align-items: center; /* Center items vertically */
+  padding: 10px;
+  color: black;
+  
+}
+
+
+
+.logout-button:hover {
+  background-color: #f8f9fa; 
+}
+
+.logout-icon {
+  margin-right: 15px;
+}
+.logout-icon {
+  margin-right: 15px; 
+  width: 1.2rem; /*  specific width for the icon container */
+}
+/* Sidebar.css */
+
+/* General sidebar styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.sidebar img {
+  margin-bottom: 20px;
+  height: 100px;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+
+/* Styles for the list and list items */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Apply padding individually */
+.sidebar li.dashboard-item {
+  padding: 10px 1000px;
+}
+
+.sidebar li.products-item {
+  padding: 10px 25px;
+}
+
+.sidebar li.orders-item {
+  padding: 10px 30px;
+}
+
+.sidebar li.farmers-item {
+  padding: 10px 35px;
+}
+
+.sidebar li.customers-item {
+  padding: 10px 100000px;
+}
+.logout-button,
+.admin-dropdown > div {
+    
+  font-size: 15px; /* Change the font size as needed */
+  font-weight: lighter bold;/* Make the font bold */
+}
+
+
+.sidebar li.admin-dropdown {
+  padding: 10px 10px;
+  font-weight: little bold; /* Make "Admin Management" text bold */
+}
+
+.sidebar .submenu li {
+  padding: 8px 50px;
+}
+
+
+.sidebar li span {
+  margin-left: 10px;
+}
+
+.sidebar .admin-dropdown div {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logout-button {
+  margin-left: -10px;
+  margin-top: auto;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+

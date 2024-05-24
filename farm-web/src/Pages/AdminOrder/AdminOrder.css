@@ -1,0 +1,63 @@
+/* Wrap the admin-order-container within a parent container */
+.admin-order-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Set height to viewport height */
+}
+
+.admin-order-container {
+  width: 900px;
+  font-size: 14px;
+  max-width: 900px;
+  /* Removed box-shadow */
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 400px;
+  margin-top: -10px;
+  margin-right: -800px;
+}
+
+.admin-order-container table {
+  width: 1140px;
+  border-collapse: collapse;
+  margin-left: -142px;
+}
+.admin-order-container th{
+  background-color: #e2e2e2c0;
+  color:  rgb(57, 57, 57);
+}
+
+.admin-order-container th{
+  padding: 10px;
+  text-align: left; /* Center content horizontally */
+
+}
+.admin-order-container td {
+  padding: 10px;
+  text-align: left; /* Center content horizontally */
+  border-bottom: 1px solid #ddd
+
+}
+
+.admin-order-heading {
+  text-align: center;
+}
+
+
+
+.order-heading {
+  color: black; /* Change color for "Order" */
+}
+
+/* Add column separator */
+.admin-order-container table th:not(:last-child),
+.admin-order-container table td:not(:last-child) {
+  border-right: 1px solid #ddd; /* Add right border to all cells except the last one */
+}
+
+/* Remove right border from the last cell in each row */
+.admin-order-container table th:last-child,
+.admin-order-container table td:last-child {
+  border-right: none; /* Remove right border from the last cell in each row */
+}

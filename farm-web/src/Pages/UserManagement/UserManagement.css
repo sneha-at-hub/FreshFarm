@@ -1,0 +1,139 @@
+.container {
+  margin-top: 20px;
+}
+
+.users-table {
+  width: 1150px;
+  border-collapse: collapse;
+  margin-left: 260px;
+  font-size: 14px;
+}
+
+.users-table th,
+.users-table td {
+  padding: 10px;
+}
+
+/* Remove border on right and left of last child table */
+.users-table:last-child td {
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+  background-color: #e2e2e2c0;
+  color: rgb(57, 57, 57);
+  font-size: 14px;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.view-details,
+.delete {
+  padding: 8px 9px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.view-details:hover,
+.delete:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Add column separator */
+.users-table th:not(:last-child),
+.users-table td:not(:last-child) {
+  border-right: 1px solid #ddd; /* Add right border to all cells except the last one */
+}
+
+/* The Modal (background) */
+.modal {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Optional shadow for better visibility */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.delete-confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-confirmation-box {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.confirmation-buttons {
+  margin-top: 20px;
+}
+
+.confirm-button {
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.no-button {
+  font-size: 14px;
+  padding: 12px 20px;
+  background-color: rgb(249, 59, 59);
+  color: white; 
+}

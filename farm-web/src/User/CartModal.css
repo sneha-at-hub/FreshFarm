@@ -1,0 +1,65 @@
+/* CartModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px; /* Increase the width */
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-icon {
+  color:rgb(1, 141, 1);
+  
+  font-size: 70px; /* Increase the icon size */
+  margin-bottom: 20px; /* Add some margin below the icon */
+}
+
+.success-message {
+  font-size: 25px; /* Increase the font size for the success message */
+  margin-bottom: 20px; /* Add some margin below the message */
+}
+
+.go-to-cart-button {
+  background-color: rgb(1, 141, 1);
+  transition: background-color 0.3s ease;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Increase padding for a larger button */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px; /* Increase font size for better readability */
+}
+.go-to-cart-button:hover {
+  background-color:rgb(4, 175, 50);  /* Change background color on hover */
+}

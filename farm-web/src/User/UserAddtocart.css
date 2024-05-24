@@ -1,0 +1,296 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 950px;
+  margin-top: 70px;
+  border-radius: 5px;;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
+  max-height: 500px; /* height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+ 
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-bottom: 10px;
+  width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Thin line with reduced opacity */
+}
+
+
+.product-image1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.product-details1 {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.product-name1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px; /* Add margin to create space between elements */
+  margin-left: 50px;
+  width: 50px;
+}
+
+.quantity-control1 {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  width: 90px;
+}
+
+.quantity-btn {
+  background-color: #71af7ac0;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantity-btn:hover {
+  background-color: #c4bebec0;
+}
+
+
+.product-price1 {
+  margin-right: 10px; /* Add margin to create space between elements */
+  margin-left: 100px;
+  width: 70px;
+}
+
+
+.remove-btn {
+  margin-left: 100px; /* Move the remove button to the right */
+  border: none;
+  background-color: white;
+
+
+}
+
+.remove-btn:hover {
+  background-color: #c8c6c7;
+}
+
+.order-summary {
+  flex-direction: column;
+  margin-top: 50px;
+  width: 300px; /* width */
+  padding: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-left: 68%;
+  margin-top: -482px;
+  max-height: 439.5px; /* Initial max-height */
+  background-color: #71af7ac0;
+  overflow-y: auto; /* Enable vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Dynamically adjust max-height */
+.order-summary.shrink {
+  max-height: calc(100vh - 200px); /* Adjust the value based on your layout */
+}
+
+
+.order-summary h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+.order-summary p {
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.order-summary span {
+  margin-left: auto; /* Adjust the margin as needed */
+}
+
+.order-summary button{
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+ margin-left: 55px;
+ margin-top: 20px;
+}
+
+.order-summary button:hover{
+  background-color: #c8c6c7;
+}
+
+.details button{
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+ margin-left: 70px;
+ margin-top: 20px;
+}
+
+.details button:hover{
+  background-color: #c8c6c7;
+}
+
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height as needed */
+  margin-left: 50px;
+}
+
+.empty-cart p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+.details-dialog {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.details-dialog h2 {
+  margin-bottom: 20px;
+}
+
+.details-dialog button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Add blur effect */
+}
+
+.checkout-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  width:400px;
+  height: 400px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above other content */
+  
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -230px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left; /* Align the text to the left */
+  width: 80%; /* Set the width to match the input fields */
+  margin-left: -17%; /* Adjust the left margin */
+  margin-top: 20px;
+}
+
+
+.checkout-form input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+.order-success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.go-home-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #06C265;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.go-home-button:hover {
+  background-color: #04a150;
+}
+
+
+
+.checkout-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-form button:hover {
+  background-color: #008000;
+}

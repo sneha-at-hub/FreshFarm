@@ -1,0 +1,44 @@
+.farmer-inquiry-heading {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 150px;
+  }
+  
+  .farmer-inquiry-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+  }
+  
+  .farmer-inquiry-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1px;
+    margin-left: 125px; /* Adjust left margin to move the table slightly to the right */
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .farmer-inquiry-container th,
+  .farmer-inquiry-container td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .farmer-inquiry-container th {
+    background-color: #e2e2e2c0;
+    color: rgb(57, 57, 57);
+    font-size: 14px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .farmer-inquiry-container tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .farmer-inquiry-container tbody tr:hover {
+    background-color: #f5f5f5;
+  }
