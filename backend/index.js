@@ -15,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('uploads'));
 
+const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQL_DATABASE}`;
 
 
 // const db = mysql.createPool({
@@ -25,15 +26,7 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
-const db = mysql.createPool({
-  connectionLimit: 10,
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  port: process.env.MYSQLPORT,
-  database: process.env.MYSQL_DATABASE
-});
-
+const db = mysql.createConnection(urlDB);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
