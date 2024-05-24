@@ -1,5 +1,4 @@
 // db.js
-const mysql = require('mysql');
 
 // Function to establish database connection
 function connectDB() {

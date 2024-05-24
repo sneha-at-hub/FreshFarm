@@ -1,11 +1,12 @@
 import express from 'express';
-import mysql from 'mysql';
+import mysql from 'mysql2';
 import cors from 'cors';
 import multer from 'multer'; 
 import jwt from 'jsonwebtoken';
 import path from 'path';
-import dotenv from 'dotenv';
-dotenv.config();
+import bcrypt from 'bcrypt';
+
+
 
 
 const app = express();
@@ -25,14 +26,43 @@ app.use(express.static('uploads'));
 //     database: "Signup"
 // });
 
+
+
+// Create a connection pool
 const db = mysql.createPool({
   connectionLimit: 10,
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  port: process.env.MYSQLPORT,
-  database: process.env.MYSQL_DATABASE
+  host: "monorail.proxy.rlwy.net",
+  user: "root",
+  password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
+  port: 20997,
+  database: "railway",
+  // Add this option to use mysql_native_password authentication plugin
+  authPlugins: {
+    mysql_clear_password: () => () => Buffer.from("BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK" + '\0')
+  }
 });
+
+// Get a connection from the pool
+db.getConnection((err, connection) => {
+  if (err) {
+    console.error('Error connecting to MySQL database:', err);
+    return;
+  }
+  console.log('Connected to MySQL database');
+
+  // Use the connection for querying
+  connection.query('SELECT 1 + 1 AS solution', (error, results, fields) => {
+    // Release the connection when done with querying
+    connection.release();
+    
+    if (error) {
+      console.error('Error executing query:', error);
+      return;
+    }
+    console.log('The solution is: ', results[0].solution);
+  });
+});
+
 
 
 const storage = multer.diskStorage({
