@@ -32,6 +32,12 @@ import FarmerInquiry from './Pages/FarmerInquiry/FarmerInquiry';
 
 export const MyContext = createContext();
 
+// Define PrivateRoute component
+function PrivateRoute({ element, authenticated, ...rest }) {
+  return authenticated ? <Route {...rest} element={element} /> : <Navigate to="/login" />;
+}
+
+
 function App() {
 
   const [adminEmail, setAdminEmail] = useState('');
@@ -74,36 +80,29 @@ function App() {
     <div className="App">
       <TokenProvider>
         <BrowserRouter>
-        
           <MyContext.Provider value={{}}>
             <Routes>
-            <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
+              <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
               <Route path="/signup" element={<RegistrationForm />} />
               <Route path="/userlanding" element={<UserLanding />} />
               <Route path="/product/:productId" element={<ProductDetailPage/>} />
-           
-          
               <Route path="/inquiries/:farmerId" element={<FarmerInquiry />} />
               <Route path="/farmer_signup" element={<RegistrationForm1 />} />
               <Route path="/addCart" element={<UserAddtocart/>} />
               <Route path="/slider" element={<HomeSlider />} />
-
-            
-              <Route path="/farmermanagement/:farmerId" element={authenticated ? <FarmerManagement /> : <Navigate to="/login" />} />
-              <Route path="/farmerorder/:farmerId" element={authenticated ? <FarmerOrder /> : <Navigate to="/login" />} />
-              <Route path="/farmer_products/:farmerId" element={authenticated ? <FarmerProductPage /> : <Navigate to="/login" />} />
-              <Route path="/farmer_inventory/:farmerId" element={authenticated ? <FarmerInventory/> : <Navigate to="/login" />} />
-              <Route path="/admin_management/:adminId" element={authenticated ? <AdminManagementInterface /> : <Navigate to="/login" />} />
-              <Route path="/AdminProduct/:adminId" element={authenticated ? <AdminProduct /> : <Navigate to="/login" />} />
-              <Route path="/adminorder/:adminId" element={authenticated ? <AdminOrder /> : <Navigate to="/login" />} />
-              <Route path="/create/:adminId" element={authenticated ? <CreatePage /> : <Navigate to="/login" />} />
-              <Route path="/usermanagement/:adminId" element={authenticated ? <UserManagement /> : <Navigate to="/login" />} />
-              <Route path="/dashboard/:id" element={authenticated ? <DashboardWithSidebar /> : <Navigate to="/login" />} />
-              <Route path="/farmerlanding/:farmerId" element={authenticated ? <FarmerDashboardWithSidebar /> : <Navigate to="/login" />} />
+              <PrivateRoute path="/farmermanagement/:farmerId" element={<FarmerManagement />} authenticated={authenticated} />
+              <PrivateRoute path="/farmerorder/:farmerId" element={<FarmerOrder />} authenticated={authenticated} />
+              <PrivateRoute path="/farmer_products/:farmerId" element={<FarmerProductPage />} authenticated={authenticated} />
+              <PrivateRoute path="/farmer_inventory/:farmerId" element={<FarmerInventory />} authenticated={authenticated} />
+              <PrivateRoute path="/admin_management/:adminId" element={<AdminManagementInterface />} authenticated={authenticated} />
+              <PrivateRoute path="/AdminProduct/:adminId" element={<AdminProduct />} authenticated={authenticated} />
+              <PrivateRoute path="/adminorder/:adminId" element={<AdminOrder />} authenticated={authenticated} />
+              <PrivateRoute path="/create/:adminId" element={<CreatePage />} authenticated={authenticated} />
+              <PrivateRoute path="/usermanagement/:adminId" element={<UserManagement />} authenticated={authenticated} />
+              <PrivateRoute path="/dashboard/:id" element={<DashboardWithSidebar />} authenticated={authenticated} />
+              <PrivateRoute path="/farmerlanding/:farmerId" element={<FarmerDashboardWithSidebar />} authenticated={authenticated} />
               <Route path="/cart" element={<CartModal/>} />
               <Route path="/inquiry" element={<UserInquiry/>} />
-
-              {/* Redirect to login if no matching route */}
               <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
           </MyContext.Provider>
@@ -111,12 +110,6 @@ function App() {
       </TokenProvider>
     </div>
   );
-
-
-
-  function PrivateRoute({ element, ...rest }) {
-    return authenticated ? <Route {...rest} element={element} /> : <Navigate to="/login" />;
-  }
 
 
   
