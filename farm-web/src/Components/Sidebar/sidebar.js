@@ -41,7 +41,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    window.location.href = '/login';
+    window.location.href = '/';
   };
 
   const isCreateOrAdmins = location.pathname.includes('/create') || location.pathname.includes('/admins');
