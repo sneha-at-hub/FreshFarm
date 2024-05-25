@@ -40,7 +40,7 @@ const FarmerSidebar = () => {
     // After logout, redirect the user to the login page
     localStorage.removeItem('token'); // Clear token from local storage
     setToken(''); // Clear token from state
-    window.location.href = '/login'; // Redirect to the login page
+    window.location.href = '/'; // Redirect to the login page
 
   };
 
