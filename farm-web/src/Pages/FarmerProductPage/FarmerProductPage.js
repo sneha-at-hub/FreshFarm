@@ -7,7 +7,7 @@ import ConfirmationDialog from '../Dialogue/ConfirmationDialog';
 import { useParams } from 'react-router-dom'; // Import useParams hook
 import FarmerSidebar from '../../Components/Sidebar/FarmerSidebar';
 
-const API_BASE_URL = 'http://localhost:8081'; // Define your API base URL
+const API_BASE_URL = 'https://freshfarm-2358894.up.railway.app'; // Define your API base URL
 
 const ProductTable = () => {
   const [products, setProducts] = useState([]);
