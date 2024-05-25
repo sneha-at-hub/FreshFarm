@@ -3,7 +3,7 @@ import axios from "axios";
 import "./FarmerInventory.css";
 import FarmerSidebar from "../../Components/Sidebar/FarmerSidebar";
 
-const API_BASE_URL = "http://localhost:8081"; // Define your API base URL
+const API_BASE_URL = "https://freshfarm-2358894.up.railway.app"; // Define your API base URL
 
 const FarmerInventory = () => {
   const [products, setProducts] = useState([]);
