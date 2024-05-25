@@ -89,17 +89,17 @@ function App() {
               <Route path="/slider" element={<HomeSlider />} />
 
             
-              <Route path="/farmermanagement/:farmerId" element={authenticated ? <FarmerManagement /> : <Navigate to="/login" />} />
-              <Route path="/farmerorder/:farmerId" element={authenticated ? <FarmerOrder /> : <Navigate to="/login" />} />
-              <Route path="/farmer_products/:farmerId" element={authenticated ? <FarmerProductPage /> : <Navigate to="/login" />} />
-              <Route path="/farmer_inventory/:farmerId" element={authenticated ? <FarmerInventory/> : <Navigate to="/login" />} />
-              <Route path="/admin_management/:adminId" element={authenticated ? <AdminManagementInterface /> : <Navigate to="/login" />} />
-              <Route path="/AdminProduct/:adminId" element={authenticated ? <AdminProduct /> : <Navigate to="/login" />} />
-              <Route path="/adminorder/:adminId" element={authenticated ? <AdminOrder /> : <Navigate to="/login" />} />
-              <Route path="/create/:adminId" element={authenticated ? <CreatePage /> : <Navigate to="/login" />} />
-              <Route path="/usermanagement/:adminId" element={authenticated ? <UserManagement /> : <Navigate to="/login" />} />
-              <Route path="/dashboard/:id" element={authenticated ? <DashboardWithSidebar /> : <Navigate to="/login" />} />
-              <Route path="/farmerlanding/:farmerId" element={authenticated ? <FarmerDashboardWithSidebar /> : <Navigate to="/login" />} />
+              <Route path="/farmermanagement/:farmerId" element={ <FarmerManagement /> } />
+              <Route path="/farmerorder/:farmerId" element={<FarmerOrder />} />
+              <Route path="/farmer_products/:farmerId" element={ <FarmerProductPage />} />
+              <Route path="/farmer_inventory/:farmerId" element={<FarmerInventory/> } />
+              <Route path="/admin_management/:adminId" element={<AdminManagementInterface /> } />
+              <Route path="/AdminProduct/:adminId" element={ <AdminProduct />} />
+              <Route path="/adminorder/:adminId" element={ <AdminOrder />} />
+              <Route path="/create/:adminId" element={ <CreatePage />} />
+              <Route path="/usermanagement/:adminId" element={ <UserManagement /> } />
+              <Route path="/dashboard/:id" element={ <DashboardWithSidebar /> } />
+              <Route path="/farmerlanding/:farmerId" element={ <FarmerDashboardWithSidebar /> } />
               <Route path="/cart" element={<CartModal/>} />
               <Route path="/inquiry" element={<UserInquiry/>} />
 
@@ -148,3 +148,4 @@ function App() {
 }
 
 export default App;
+ 
