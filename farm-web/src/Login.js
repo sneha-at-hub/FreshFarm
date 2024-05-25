@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Nav from './Nav';
-import { jwtDecode } from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -9,14 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [authenticated, setAuthenticated] = useState(false); 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    if (!email || !password) {
-      alert('Please enter email and password.');
-      return;
-    }
-  
+  const handleLogin = async () => {
     try {
       const response = await fetch('https://freshfarm-2358894.up.railway.app/login', {
         method: 'POST',
@@ -25,37 +17,58 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password })
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error);
       }
-  
+
       const { token } = await response.json();
-      localStorage.setItem('token', token); // Store token in localStorage
-  
-      // Decode the token to get email and role
+      localStorage.setItem('token', token);
+
       const decodedToken = jwtDecode(token);
       const { email: userEmail, isAdmin, isFarmer } = decodedToken;
-  
-      console.log("Decoded Token:", decodedToken);
       setAuthenticated(true);
-  
-      // Navigate to respective dashboard based on user role
+
       if (isAdmin) {
-        console.log("Admin logged in, navigating to dashboard");
         navigate(`/dashboard/${userEmail}`);
       } else if (isFarmer) {
-        console.log("Farmer logged in, navigating to farmer landing");
         navigate(`/farmerlanding/${userEmail}`);
       } else {
-        console.log("User logged in, navigating to user landing");
-        navigate(`/userlanding`);
+        navigate(`/userlanding/${userEmail}`);
       }
+
+      // Log login activity after successful login
+      logLoginActivity(email);
     } catch (error) {
       alert(error.message);
     }
   };
+
+  const logLoginActivity = async (email) => {
+    try {
+      await fetch('https://freshfarm-2358894.up.railway.app/loginactivity', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+    } catch (error) {
+      console.error('Error logging login activity:', error);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      alert('Please enter email and password.');
+      return;
+    }
+    handleLogin();
+  };
+
+
   const spanStyle = {
     position: 'absolute',
     right: 0,
