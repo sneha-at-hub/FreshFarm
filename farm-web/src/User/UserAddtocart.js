@@ -3,9 +3,12 @@ import './UserAddtocart.css'; // Import the CSS file
 import Nav from '../Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
 
 function Cart({ userId }) {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [buyerName, setBuyerName] = useState('');
@@ -203,7 +206,7 @@ function Cart({ userId }) {
 
   const handleGoBackHome = () => {
     // Redirect to home page or perform any other action
-    window.location.href = '/userlanding'; // Assuming '/' is the home route
+    navigate(-3);
   };
 
   // Render cart items if data fetching is successful
