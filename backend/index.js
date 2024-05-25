@@ -30,17 +30,16 @@ app.use(express.static('uploads'));
 // Create a connection pool
 const db = mysql.createPool({
   connectionLimit: 10,
-  host: "monorail.proxy.rlwy.net",
+  host: "viaduct.proxy.rlwy.net",
   user: "root",
-  password: "BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK",
-  port: 20997,
+  password: "uiFtYisHByIafuuugdUbYCGNlxlfHbIB",
+  port: 43900,
   database: "railway",
   // Add this option to use mysql_native_password authentication plugin
   authPlugins: {
-    mysql_clear_password: () => () => Buffer.from("BGHsUiImQtWSEWSiFbLtEPRaIodYzvsK" + '\0')
+    mysql_clear_password: () => () => Buffer.from("uiFtYisHByIafuuugdUbYCGNlxlfHbIB" + '\0')
   }
 });
-
 
 // Get a connection from the pool
 db.getConnection((err, connection) => {
