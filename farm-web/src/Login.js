@@ -35,7 +35,7 @@ const Login = () => {
       } else if (isFarmer) {
         navigate(`/farmerlanding/${userEmail}`);
       } else {
-        navigate(`/userlanding/${userEmail}`);
+        navigate(`/userlanding`);
       }
 
       // Log login activity after successful login
