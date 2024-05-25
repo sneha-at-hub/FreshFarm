@@ -11,7 +11,7 @@ const AdminProduct = () => {
   const [searchInput, setSearchInput] = useState('');
   const [imageError, setImageError] = useState('');
   const [productToDelete, setProductToDelete] = useState(null);
-  const API_BASE_URL = 'http://localhost:8081'; // Define your API base URL
+  const API_BASE_URL = 'https://freshfarm-2358894.up.railway.app'; // Define your API base URL
 
   useEffect(() => {
     fetchProducts();
