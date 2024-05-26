@@ -8,7 +8,7 @@ is to support local farmers by providing them with a platform to sell their fres
 
 # Features
 - Admin Interface: Monitor farmer activities and manage the platform.
-- Farmer Interface: Manage product listings, orders, and respond to customer inquiries.
+- Farmer Interface: Manage product listings, orders, and view to customer inquiries.
 - Customer Interface: Search for products, view details, and make purchases.
 
 
