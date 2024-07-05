@@ -1,11 +1,5 @@
 ## Local Farmer's Market: Fresh Farm
 
-# Overview
-Fresh Farm is a collaborative project developed by five team members. Our goal 
-is to support local farmers by providing them with a platform to sell their fresh
- products directly to customers. Customers can easily search for and purchase fresh
- products from local farms.
-
 # Features
 - Admin Interface: Monitor farmer activities and manage the platform.
 - Farmer Interface: Manage product listings, orders, and view to customer inquiries.
